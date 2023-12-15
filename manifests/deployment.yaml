@@ -13,7 +13,7 @@ spec:
         app: nodejs-restapi-deployment
     spec:
       containers:
-      - name: container
-        image: europe-west8-docker.pkg.dev/goreply-playground-idp/docker-images/test:0.0.0
-        ports:
-        - containerPort: 8080
+        - name: container
+          image: europe-west8-docker.pkg.dev/goreply-playground-idp/docker-images/test:main
+          ports:
+            - containerPort: 8080
