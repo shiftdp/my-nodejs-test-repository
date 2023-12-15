@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-restapideployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejs-restapi-deployment
+  template:
+    metadata:
+      labels:
+        app: nodejs-restapi-deployment
+    spec:
+      containers:
+      - name: container
+        image: europe-west8-docker.pkg.dev/goreply-playground-idp/docker-images/test:0.0.0
+        ports:
+        - containerPort: 8080
